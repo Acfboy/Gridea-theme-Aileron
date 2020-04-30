@@ -1,0 +1,96 @@
+{
+    "name": "Aileron",
+    "version": "1.0.0",
+    "author": "Acfboy",
+    "repository": "https://github.com/Acfboy/Gridea-theme-Aileron",
+    "customConfig": [
+        {
+            "name": "background",
+            "label": "背景图片",
+            "group": "自定义",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "idopacity",
+            "label": "个人信息标签透明度",
+            "group": "自定义",
+            "value": "",
+            "type": "input",
+            "note": "0-1之间数值"
+        },
+        {
+            "name": "headopacity",
+            "label": "导航栏标签透明度",
+            "group": "自定义",
+            "value": "",
+            "type": "input",
+            "note": "0-1之间数值"
+        },
+        {
+            "name": "messopacity",
+            "label": "文章标签透明度",
+            "group": "自定义",
+            "value": "",
+            "type": "input",
+            "note": "0-1之间数值"
+        },
+        {
+            "name": "youliana",
+            "label": "友链地址",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "youliann",
+            "label": "友链名称",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接名称"
+        },
+        {
+            "name": "youliana2",
+            "label": "友链地址2",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "youliann2",
+            "label": "友链名称2",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接名称"
+        },
+        {
+            "name": "youliana3",
+            "label": "友链地址3",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接地址"
+        },
+        {
+            "name": "youliann3",
+            "label": "友链名称3",
+            "group": "友情链接",
+            "value": "",
+            "type": "input",
+            "note": "链接名称"
+        },
+        {
+            "name": "notice",
+            "label": "公告栏",
+            "group": "侧边栏",
+            "value": "",
+            "type": "textarea",
+            "note": "不填写则不显示"
+        }
+    ]
+}

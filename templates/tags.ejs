@@ -1,0 +1,47 @@
+<html>
+  <head>
+  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <style>
+    body {
+ 
+	background:url('<%= site.customConfig.background%>')no-repeat;
+	 
+	width:100%;
+	 
+	height:100%;
+	 
+	background-size:100% 100%;
+	 
+	position:absolute;
+	 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png',sizingMethod='scale');
+	background-attachment: fixed
+	 
+}
+.post{
+        opacity: <%= site.customConfig.messopacity%>;
+    } 
+    .site-header{
+        opacity: <%= site.customConfig.headopacity%>;
+    } 
+    .right{
+    	opacity: <%= site.customConfig.idopacity%>;
+    }
+</style>
+  <body>
+    <%- include('./includes/header') %>
+    <div class="main">
+      <div class = "right"><%- include('./includes/idcard') %></div>
+      <div class="main-content">
+        <div class="tags-container">
+          <% tags.forEach((tag) => { %>
+            <a class="tag" href="<%= tag.link %>"><%= tag.name %></a>
+          <% }); %>
+        </div>
+
+        <%- include('./includes/footer') %>
+      </div>
+    </div>
+  </body>
+</html>
