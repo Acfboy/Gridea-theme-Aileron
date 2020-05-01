@@ -35,20 +35,28 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
   margin: 0;
   padding: 0;
 }
-
+.site-header{ 
+	position: fixed;
+	z-index: 99999;
+	
+}
 .main {
   max-width: 960px;
   min-height: 100vh;
   margin: 0 auto;
-  
   .right{ 
    
    position:fixed;  
    top:100px; left:900px;
    display:inline-table;  width: 300px;
-   background: white; float : right;
-	border-radius: 25px;
+    float : right;
    
+   .id_card{background: white;  border-radius: 25px;}
+   .noticecard{
+   	background: white;  border-radius: 25px;
+   	padding: 15px;
+   	.youliann{ color: blue;}
+   }
    img.ava{
    	padding: 15px;
         width: 100px;
