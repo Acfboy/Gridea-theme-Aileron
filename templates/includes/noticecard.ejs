@@ -1,0 +1,18 @@
+<div class="noticecard">
+	<% if(typeof site.customConfig.youliann !== 'undefined'&&site.customConfig.youliann){ %>
+ 	<div class = "youlian">
+ 	<style> .youliann{color: blue; } </style>
+ 	 	<h3>友情链接</h3>
+ 	 	<a class = "youliann" href="<%= site.customConfig.youliana %>"><%= site.customConfig.youliann %></a> 
+       	<a class = "youliann" href="<%= site.customConfig.youliana2 %>"><%= site.customConfig.youliann2 %></a> 
+        <a class = "youliann" href="<%= site.customConfig.youliana3 %>"><%= site.customConfig.youliann3 %></a> 
+ 	</div>
+ 	<%}%>
+ 	<% if(typeof site.customConfig.notice !== 'undefined'&&site.customConfig.notice){ %>
+ 	<div class = "notice">
+ 	 	<h4>公告栏</h4>
+ 	 	<%- site.customConfig.notice %>
+ 	</div>
+ 	<%}%>
+</div>
+

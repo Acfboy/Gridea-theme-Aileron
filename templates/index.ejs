@@ -3,6 +3,16 @@
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
   </head>
   <style>
+    @keyframes fade-in {  
+    	0% {opacity: 0;}/*初始状态 透明度为0*/  
+    	40% {opacity: 0;}/*过渡状态 透明度为0*/  
+    	100% {opacity: 0.8;}/*结束状态 透明度为1*/  
+    }  
+    @-webkit-keyframes fade-in {/*针对webkit内核*/  
+    	0% {opacity: 0;}  
+    	40% {opacity: 0;}  
+    	100% {opacity: 0.85;}  
+    }  
     body {
  
 	background:url('<%= site.customConfig.background%>')no-repeat;
@@ -21,19 +31,29 @@
 }
 .left{
         opacity: <%= site.customConfig.messopacity%>;
+        animation-duration: 2s;/*动画持续时间*/  
+    	-webkit-animation:fade-in 2s;/*针对webkit内核*/  
     } 
     .site-header{
         opacity: <%= site.customConfig.headopacity%>;
+        animation-duration: 1.5s;/*动画持续时间*/  
+    	-webkit-animation:fade-in 1.5s;/*针对webkit内核*/  
     } 
     .right{
     	opacity: <%= site.customConfig.idopacity%>;
+    	animation-duration: 0.8s;/*动画持续时间*/  
+    	-webkit-animation:fade-in 0.8s;/*针对webkit内核*/  
     }
 </style>
   <body>
     <%- include('./includes/header') %>
     <br></br> <br></br> 
     <div class="main">
-      <div class = "right"><%- include('./includes/idcard') %></div>
+      <div class = "right">
+      	<%- include('./includes/idcard') %> 
+      	<br></br>
+        <%- include('./includes/noticecard') %>
+      </div>
       <div class="main-content">
      	<div class = "left"><%- include('./includes/post-list') %></div>
         <%- include('./includes/pagination') %>

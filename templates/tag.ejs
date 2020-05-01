@@ -2,16 +2,57 @@
   <head>
   <%- include('./includes/head', { siteTitle: `${tag.name} | ${themeConfig.siteName}` }) %>
   </head>
+    <style>
+    @keyframes fade-in {  
+    	0% {opacity: 0;}/*初始状态 透明度为0*/  
+    	40% {opacity: 0;}/*过渡状态 透明度为0*/  
+    	100% {opacity: 0.8;}/*结束状态 透明度为1*/  
+    }  
+    @-webkit-keyframes fade-in {/*针对webkit内核*/  
+    	0% {opacity: 0;}  
+    	40% {opacity: 0;}  
+    	100% {opacity: 0.85;}  
+    }  
+    body {
+ 
+	background:url('<%= site.customConfig.background%>')no-repeat;
+	 
+	width:100%;
+	 
+	height:100%;
+	 
+	background-size:100% 100%;
+	 
+	position:absolute;
+	 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png',sizingMethod='scale');
+	background-attachment: fixed
+	 
+}
+.left{
+        opacity: <%= site.customConfig.messopacity%>;
+        animation-duration: 1s;/*动画持续时间*/  
+    	-webkit-animation:fade-in 1s;/*针对webkit内核*/  
+    } 
+    .site-header{
+        opacity: <%= site.customConfig.headopacity%>;
+    } 
+    .right{
+    	opacity: <%= site.customConfig.idopacity%>;
+    }
+</style>
   <body>
+    <%- include('./includes/header') %>
     <div class="main">
+      <div class = "right"><%- include('./includes/idcard') %></div>
+      <br></br><br></br>
       <div class="main-content">
-        <%- include('./includes/header') %>
         <div class="current-tag-container">
             <h2 class="title">
                 标签：#<%= tag.name %>
             </h2> 
         </div>
-        <%- include('./includes/post-list') %>
+        <div class = "left"><%- include('./includes/post-list') %></div>
         <%- include('./includes/pagination') %>
         <%- include('./includes/footer') %>
       </div>

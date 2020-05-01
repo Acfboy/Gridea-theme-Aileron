@@ -1,6 +1,6 @@
 {
     "name": "Aileron",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "Acfboy",
     "repository": "https://github.com/Acfboy/Gridea-theme-Aileron",
     "customConfig": [
@@ -91,6 +91,33 @@
             "value": "",
             "type": "textarea",
             "note": "不填写则不显示"
-        }
+        },
+      {
+      "name": "headcolor",
+      "label": "顶栏颜色",
+      "group": "颜色",
+      "value": "#fff",
+      "type": "input",
+      "card": "color",
+      "note": "设置顶栏颜色"
+      },
+      {
+      "name": "idcolor",
+      "label": "个人信息颜色",
+      "group": "颜色",
+      "value": "#fff",
+      "type": "input",
+      "card": "color",
+      "note": "设置个人信息颜色"
+      },
+      {
+      "name": "noticecolor",
+      "label": "公告栏&友链颜色",
+      "group": "颜色",
+      "value": "#fff",
+      "type": "input",
+      "card": "color",
+      "note": "设置公告栏&友链颜色"
+      }
     ]
 }
