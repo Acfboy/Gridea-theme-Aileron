@@ -2,17 +2,16 @@
 	<% if(typeof site.customConfig.youliann !== 'undefined'&&site.customConfig.youliann){ %>
  	<div class = "youlian">
  	<style> .youliann{color: blue; } </style>
- 	 	<h3>友情链接</h3>
- 	 	<a class = "youliann" href="<%= site.customConfig.youliana %>"><%= site.customConfig.youliann %></a> 
-       	<a class = "youliann" href="<%= site.customConfig.youliana2 %>"><%= site.customConfig.youliann2 %></a> 
+ 	 	<h3>友情链接</h3><br>
+ 	 	<a class = "youliann" href="<%= site.customConfig.youliana %>"><%= site.customConfig.youliann %></a> <% if(typeof site.customConfig.youliann2 !== 'undefined'&&site.customConfig.youliann2){ %> <br> <% } %>
+       	<a class = "youliann" href="<%= site.customConfig.youliana2 %>"><%= site.customConfig.youliann2 %></a>  <% if(typeof site.customConfig.youliann3 !== 'undefined'&&site.customConfig.youliann3){ %> <br> <% } %>
         <a class = "youliann" href="<%= site.customConfig.youliana3 %>"><%= site.customConfig.youliann3 %></a> 
  	</div>
  	<%}%>
- 	<% if(typeof site.customConfig.notice !== 'undefined'&&site.customConfig.notice){ %>
+ 	<% if(typeof site.customConfig.notice !== 'undefined'&&site.customConfig.notice){ %>    <br>
  	<div class = "notice">
- 	 	<h4>公告栏</h4>
+ 	 	<h3>公告栏</h3><br>
  	 	<%- site.customConfig.notice %>
  	</div>
  	<%}%>
 </div>
-
