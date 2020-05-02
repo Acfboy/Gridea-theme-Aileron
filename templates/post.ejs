@@ -3,6 +3,9 @@
     <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
   </head>
    <style>
+   .main {
+   max-width: 1200px;}
+   .post{width: 750px;}
    @keyframes fade-in {  
     	0% {opacity: 0;}/*初始状态 透明度为0*/  
     	40% {opacity: 0;}/*过渡状态 透明度为0*/  
@@ -29,6 +32,13 @@
 	background-attachment: fixed
 	 
 }
+
+   .gt-container{
+    background : white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    opacity: <%= site.customConfig.messopacity%>;
+	}
 .post-detail{
         opacity: <%= site.customConfig.messopacity%>;
         animation-duration: 1s;/*动画持续时间*/  
@@ -43,7 +53,7 @@
 </style>
   <body>
      <%- include('./includes/header') %>
-     <br></br><br></br>
+     <br></br><br></br><br></br>
     <div class="main">
       <div class = "right"><%- include('./includes/idcard') %></div>
       <div class="main-content">
@@ -71,7 +81,16 @@
             </div>
           </article>
         </div>
-    
+        <br></br>
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+          <% if (commentSetting.commentPlatform === 'gitalk') { %>
+            <%- include('./includes/gitalk') %>
+          <% } %>
+
+          <% if (commentSetting.commentPlatform === 'disqus') { %>
+            <%- include('./includes/disqus') %>
+          <% } %>
+        <% } %>
         <% if (post.nextPost && !post.hideInList) { %>
           <div class="next-post">
             <div class="next">下一篇</div>
@@ -82,16 +101,7 @@
             </a>
           </div>  
         <% } %>
-
-        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-          <% if (commentSetting.commentPlatform === 'gitalk') { %>
-            <%- include('./includes/gitalk') %>
-          <% } %>
-
-          <% if (commentSetting.commentPlatform === 'disqus') { %>
-            <%- include('./includes/disqus') %>
-          <% } %>
-        <% } %>
+       
     
         <%- include('./includes/footer') %>
       </div>
