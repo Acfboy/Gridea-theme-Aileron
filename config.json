@@ -1,6 +1,6 @@
 {
     "name": "Aileron",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "author": "Acfboy",
     "repository": "https://github.com/Acfboy/Gridea-theme-Aileron",
     "customConfig": [
@@ -91,6 +91,14 @@
             "value": "",
             "type": "textarea",
             "note": "不填写则不显示"
+        },
+        {
+            "name": "xuke",
+            "label": "许可证",
+            "group": "许可证",
+            "value": "",
+            "type": "textarea",
+            "note": "放入许可证html"
         },
       {
       "name": "headcolor",

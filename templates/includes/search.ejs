@@ -1,0 +1,51 @@
+<script language="JavaScript"> 
+function encode(s) {
+    return s.replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/([\\\.\*\[\]\(\)\$\^])/g, "\\$1");
+}
+ 
+function decode(s) {
+    return s.replace(/\\([\\\.\*\[\]\(\)\$\^])/g, "$1").replace(/>/g, ">").replace(/</g, "<").replace(/&/g, "&");
+}
+ 
+function highlight(s) {
+    if (s.length == 0) {
+        alert('请输入你要搜索的内容！');
+        return false;
+    }
+    s = encode(s);
+    var obj = document.getElementsByTagName("body")[0];
+    var t = obj.innerHTML.replace(/<a\s+class=.?highlight.?>([^<>]*)<\/a>/gi, "$1");
+    obj.innerHTML = t;
+    var cnt = loopSearch(s, obj);
+    t = obj.innerHTML
+    var r = /{searchHL}(({(?!\/searchHL})|[^{])*){\/searchHL}/g
+    t = t.replace(r, "<a class='highlight' name='highlighttext'>$1</a>");
+    obj.innerHTML = t;
+    window.location.href = '#highlighttext';
+}
+ 
+function loopSearch(s, obj) {
+    var cnt = 0;
+    if (obj.nodeType == 3) {
+        cnt = replace(s, obj);
+        return cnt;
+    }
+    for (var i = 0, c; c = obj.childNodes[i]; i++) {
+        if (!c.className || c.className != "highlight") cnt += loopSearch(s, c);
+    }
+    return cnt;
+}
+
+function replace(s, dest) {
+    var r = new RegExp(s, "g");
+    var tm = null;
+    var t = dest.nodeValue;
+    var cnt = 0;
+    if (tm = t.match(r)) {
+        cnt = tm.length;
+        t = t.replace(r, "{searchHL}" + decode(s) + "{/searchHL}")
+        dest.nodeValue = t;
+    }
+    return cnt;
+}
+</script>

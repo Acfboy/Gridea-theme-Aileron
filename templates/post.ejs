@@ -78,10 +78,13 @@
             <% } %>
             <div class="post-content">
               <%- post.content %>
+              <HR>
+              <%- site.customConfig.xuke%>
             </div>
           </article>
         </div>
         <br></br>
+        
         <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
           <% if (commentSetting.commentPlatform === 'gitalk') { %>
             <%- include('./includes/gitalk') %>
@@ -101,7 +104,6 @@
             </a>
           </div>  
         <% } %>
-       
     
         <%- include('./includes/footer') %>
       </div>

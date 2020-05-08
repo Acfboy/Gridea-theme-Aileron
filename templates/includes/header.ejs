@@ -1,4 +1,12 @@
+<style>.search{display: none;}</style>
 <div class="site-header">
+   <!--
+    <div class = "search">
+    <form onsubmit="highlight(this.s.value);return false;">
+<input name="s" id="s" class="sou" />
+<input type="submit" id="submit" value="搜索一下试试"/>
+</form></div>
+  -->
   <div class="menu-container">
     <% menus.forEach(function(menu) { %>
       <% if (menu.openType === 'External') { %>
