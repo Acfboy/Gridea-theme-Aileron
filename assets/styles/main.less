@@ -56,15 +56,21 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
   .right{ 
    
    position:fixed;  
-   top:100px; left:900px;
+   top:10vh; left:70vw;
    display:inline-table;  width: 300px;
     float : right;
    
-   .id_card{background: white;  border-radius: 25px;}
+   .id_card{background: white;  border-radius: 25px; box-shadow: 0px 0px 15px #888888;}
    .noticecard{
    	background: white;  border-radius: 25px;
    	padding: 15px;
+   	box-shadow: 0px 0px 15px #888888;
    	.youliann{ color: blue;}
+   }
+   .toccard{
+   	background: white;  border-radius: 25px;
+   	padding: 15px;
+   	box-shadow: 0px 0px 15px #888888;
    }
    img.ava{
    	padding: 15px;
@@ -74,7 +80,7 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-   	background: url('<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>')no-repeat;
+        background: url('<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>')no-repeat;
    }
    .id_card-title{
    	padding: 10px 10px;
@@ -97,12 +103,14 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
     .left{ display:inline-table; }
     
     article.post{
+    		box-shadow: 0px 0px 15px #888888;
 	    	//max-width: 600px;
 	    	background : white;
 		border-radius: 25px;
 		padding: 10px 20px;
 	
     }
+    article.post:hover{box-shadow: 0px 0px 25px #888888;}
   }
 }
 

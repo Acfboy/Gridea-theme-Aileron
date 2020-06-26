@@ -4,8 +4,8 @@
   </head>
    <style>
    .main {
-   max-width: 1200px;}
-   .post{width: 750px;}
+   max-width: 1000px;}
+   .post{width: 700px;}
    @keyframes fade-in {  
     	0% {opacity: 0;}/*初始状态 透明度为0*/  
     	40% {opacity: 0;}/*过渡状态 透明度为0*/  
@@ -53,15 +53,20 @@
 </style>
   <body>
      <%- include('./includes/header') %>
-     <br></br><br></br><br></br>
+     <br></br><br></br>
     <div class="main">
-      <div class = "right"><%- include('./includes/idcard') %></div>
+      <div class = "right">
+      	<%- include('./includes/idcard') %>
+      	<br><br>
+        <%- include('./includes/toc') %>
+      </div>
+      </div>
       <div class="main-content">
         <div class="post-detail">
           <article class="post">
-            <h2 class="post-title">
+            <p class="post-title" style = "font-size:30px;">
               <%= post.title %>
-            </h2>
+            </p>
             <div class="post-info">
               <time class="post-time">
                 · <%= post.dateFormat %> ·

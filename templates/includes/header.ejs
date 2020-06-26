@@ -1,12 +1,12 @@
-<style>.search{display: none;}</style>
+<% if(site.customConfig.lizi){ %>
+<script type="text/javascript"
+color="220,220,220" opacity='0.9' zIndex="-2" count="200" src="http://www.12cow.com/wp-includes/js/canvas-nest.min.js">
+</script>
+<% } %>
+<% if(site.customConfig.caidai){ %>
+<script type="text/javascript" src="http://www.12cow.com/wp-includes/js/ribbon.js"></script>
+<% } %>
 <div class="site-header">
-   <!--
-    <div class = "search">
-    <form onsubmit="highlight(this.s.value);return false;">
-<input name="s" id="s" class="sou" />
-<input type="submit" id="submit" value="搜索一下试试"/>
-</form></div>
-  -->
   <div class="menu-container">
     <% menus.forEach(function(menu) { %>
       <% if (menu.openType === 'External') { %>
