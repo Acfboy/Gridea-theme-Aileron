@@ -38,7 +38,7 @@
       }
   
       .post-tag {
-        padding: 8px 16px;
+//        padding: 8px 16px;
       }
     }
   
@@ -55,7 +55,6 @@
       	display: block;
       	max-width:700;
 	float: center;
-	overflow-x: auto;
       }
       img {
         display: inline-block;
@@ -86,6 +85,7 @@
           font-size: 0.9em;
           border-radius: 2px;
           display: inline-block;
+          color: #FF3300;
         }
       }
   
@@ -101,14 +101,22 @@
       }
 
       blockquote {
-        background: #f3f5f7;
-        padding: 16px;
-        border-left: 2px solid #006cff;
-        margin-bottom: 16px;
-        p {
-          margin-bottom: 0;
-        }
-      }
+    border-left:.5em solid #eee;
+    padding: 0 0 0 2em;
+    margin-left:0;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+}
 
       table {
         border-collapse: collapse;
