@@ -1,6 +1,8 @@
+已经停止维护。
+
 ### 简介
 
-一个简约的Gridea主题，更详细的介绍看[这里](https://acfboy.pw/Aileron/)。
+一个简约的Gridea主题，更详细的介绍看[这里](https://acfboy.pw/Aileron/)(链接已经失效)。
 
 
 ### 功能
